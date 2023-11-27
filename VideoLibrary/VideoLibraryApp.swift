@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct VideoLibraryApp: App {
+    var model = ContentModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(model: model)
         }
+        .windowResizability(.contentSize)
     }
 }
